@@ -22,7 +22,7 @@ $(document).ready(function(){
         //$("#error1").css("color,red");
        //if(num1 == ""){
         //console.log("hola");
-       //}
+       //}       
         
        $("#error1").text("");
        $("#error2").text("");
@@ -32,7 +32,7 @@ $(document).ready(function(){
 
        
             $("#error1").text("debe agregar el primer numero");
-            $("#error1").text("color,red");
+            $("#error1").css("color","red");
             return;
         }
 
@@ -40,18 +40,18 @@ $(document).ready(function(){
 
        
            $("#error2").text("debe agregar el primer numero");
-           $("#error2").text("color,red");
+           $("#error2").css("color","red");
            return;
         }
-        num1 = pareInt($("numero1").val())
-        num2 = pareInt($("numero1").val())
+
+        
+        num1 = parseInt($("#numero1").val())
+        num2 = parseInt($("#numero2").val())
         resultado =  num1 + num2;
         
-        $("#Resultado").show();
-        $("#Resultado").text(resultado);
         
-        //console.log(num1);
-        //console.log(typeof(num1));
+        $("#resultado").show();
+        $("#resultado").text(resultado);
     });
 
     $("#btnLimpiar").click(function(){
